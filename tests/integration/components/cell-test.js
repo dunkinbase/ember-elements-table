@@ -117,5 +117,71 @@ module('Integration | cell', function() {
 
       assert.equal(get(rows[0], 'A'), 'Z', 'value updated successfully');
     });
+
+    test('check whether default rowHeight is 32 or not', async function(assert) {
+      let columnCount = 1;
+      let rows = [
+        {
+          A: 'A',
+        },
+      ];
+
+      this.set('columns', generateColumns(columnCount));
+      this.set('rows', rows);
+
+      this.render(hbs`
+        <div id="container" style="height: 500px;">
+          {{#ember-table as |t|}}
+            {{ember-thead api=t columns=columns}}
+
+            {{#ember-tbody api=t rows=rows as |b|}}
+              {{#ember-tr api=b as |r|}}
+                {{#ember-td class='hellow' api=r as |cellValue|}}
+                  {{cellValue}}
+                {{/ember-td}}
+              {{/ember-tr}}
+            {{/ember-tbody}}
+          {{/ember-table}}
+        </div>
+      `);
+
+      await wait();
+
+
+      assert.equal(document.querySelector('.hellow').style.height, '32px');
+    });
+
+    test('add custom row height', async function(assert) {
+      let columnCount = 1;
+      let rows = [
+        {
+          A: 'A',
+        },
+      ];
+
+      this.set('columns', generateColumns(columnCount));
+      this.set('rows', rows);
+
+      this.render(hbs`
+        <div id="container" style="height: 500px;">
+          {{#ember-table as |t|}}
+            {{ember-thead api=t columns=columns}}
+
+            {{#ember-tbody api=t rows=rows as |b|}}
+              {{#ember-tr api=b as |r|}}
+                {{#ember-td  rowHeight=56 class='hellow' api=r as |cellValue|}}
+                  {{cellValue}}
+                {{/ember-td}}
+              {{/ember-tr}}
+            {{/ember-tbody}}
+          {{/ember-table}}
+        </div>
+      `);
+
+      await wait();
+
+
+      assert.equal(document.querySelector('.hellow').style.height, '56px');
+    });
   });
 });
