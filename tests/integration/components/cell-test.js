@@ -10,6 +10,7 @@ import wait from 'ember-test-helpers/wait';
 
 import TablePage from 'ember-table/test-support/pages/ember-table';
 import { run } from '@ember/runloop';
+import Ember from 'ember';
 
 let table = new TablePage();
 
@@ -182,6 +183,21 @@ module('Integration | cell', function() {
 
 
       assert.equal(document.querySelector('.hellow').style.height, '56px');
+    });
+
+    test('selected cell on td click', async function(assert) {
+      this.on(
+        'onCellClick',
+        ({ event, cellValue, cellMeta, columnValue, columnMeta, rowValue, rowMeta }) => {
+          console.log(event)
+           Ember.set(cellMeta,'selectedCell',true)
+        }
+      );
+
+      await generateTable(this);
+      await table.getCell(0, 0).click();
+      await wait();
+      assert.ok(document.querySelector('.selectedCell'))
     });
   });
 });
