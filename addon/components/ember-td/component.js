@@ -60,6 +60,13 @@ export default class EmberTd extends BaseTableCell {
   @type(optional(Action))
   onDoubleClick;
 
+  /**
+    Default row height is 32
+  */
+  @argument({ defaultIfUndefined: true })
+  @type('number')
+  rowHeight =32;
+
   @computed('api') // only watch `api` due to a bug in Ember
   get unwrappedApi() {
     return this.get('api.api') || this.get('api');
