@@ -7,7 +7,7 @@ $table-hover-color: #e5edf8;
 
 .ember-table {
   border: solid 1px #dddddd;
-
+  
   th,
   td {
     white-space: nowrap;
@@ -58,19 +58,21 @@ $table-hover-color: #e5edf8;
       border-right: none;
     }
   }
-
-  thead {
-    -webkit-box-shadow: 0 1px 0 rgba(16, 22, 26, .15), inset -1px 0 0 rgba(16, 22, 26, .15);
-    box-shadow: 0 1px 0 rgba(16, 22, 26, .15), inset -1px 0 0 rgba(16, 22, 26, .15);
+  thead{
+    -webkit-box-shadow: 0 1px 0 rgba(16,22,26,.15), inset -1px 0 0 rgba(16,22,26,.15);
+    box-shadow: 0 1px 0 rgba(16,22,26,.15), inset -1px 0 0 rgba(16,22,26,.15);
   }
-
   thead th {
     border-bottom: 1px solid $table-border-color;
     border-right: solid 1px $table-border-color;
-
+    // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    
     position: relative;
     overflow: hidden;
-    background-color: #f5f8fa !important;
+     background-color: #f5f8fa !important;
+    // &:last-child {
+    //   border-right: none;
+    // }
 
     &.is-fixed-right {
       border-left: solid 1px $table-border-color;
@@ -100,6 +102,13 @@ $table-hover-color: #e5edf8;
   }
 }
 
+.ember-table {
+  /**** Sort Controls ****/
+  /**** Resize Controls ****/
+  /**** Reorder Controls ****/
+  /**** Row Controls ****/
+
+}
 
 .ember-table th.is-sortable {
   cursor: pointer;
@@ -266,7 +275,7 @@ $table-hover-color: #e5edf8;
 }
 
 .ember-table tr td {
-  font-size: 12px ;
+  font-size: 12px !important;
 }
 
 .ember-table tbody td {
@@ -281,5 +290,5 @@ $table-hover-color: #e5edf8;
 
 td.selectedCell,
 td.selectedCell:hover {
-  background-color: white ;
+  background-color: white !important;
 }
