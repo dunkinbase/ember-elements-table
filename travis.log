@@ -1,0 +1,134 @@
+Command line:
+"travis env set -- DEPLOY_KEY -----BEGIN RSA PRIVATE KEY-----
+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
+-----END RSA PRIVATE KEY-----"
+
+
+   ________                                 __
+  /        |                               /  |
+  ########/ ______    ______    __     __  ##/    _______
+     ## |  /      \  /      \  /  \   /  | /  |  /       |
+     ## | /######  | ######  | ##  \ /##/  ## | /#######/
+     ## | ## |  ##/  /    ## |  ##  /##/   ## | ##      \
+     ## | ## |      /####### |   ## ##/    ## |  ######  |
+     ## | ## |      ##    ## |    ###/     ## | /     ##/
+     ##/  ##/        #######/      #/      ##/  #######/
+
+     TRajectory Analyzer and VISualizer  -  Open-source freeware under GNU GPL v3
+
+     Copyright (c) Martin Brehm      (2009-2017), University of Halle (Saale)
+                   Martin Thomas     (2012-2017)
+                   Barbara Kirchner  (2009-2017), University of Bonn
+
+     http://www.travis-analyzer.de
+
+     Please cite: M. Brehm, B. Kirchner: J. Chem. Inf. Model. 2011, 51 (8), pp 2007-2023.
+
+     There is absolutely no warranty on any results obtained from TRAVIS.
+
+  #  Running on pranav-Aspire-E5-575G at Tue Feb 12 11:52:03 2019 (PID 10329).
+  #  Running in /media/pranav/Pranav/darkhouse/dunkinbase/ember-elements-table
+  #  Code version: Aug 12 2017, compiled at Jan 14 2018 01:39:14, compiler "7.2.0", GCC 7.2.0
+  #  Target platform: Linux, compile flags: DEBUG_ARRAYS 
+  #  Machine: int=4b, long=8b, addr=8b, 0xA0B0C0D0=D0,C0,B0,A0.
+  #  User home: /home/pranav, executable: /usr/bin/travis
+  #  Input from terminal, Output to terminal
+
+ >>> Please use a color scheme with dark background or specify "-nocolor"! <<<
+
+    No configuration file found.
+    Writing default configuration to /home/pranav/.travis.conf ...
+
+Unknown parameter: "env".
+
+    List of supported command line options:
+
+      -p <file>       Loads position data from the specified trajectory file.
+                      The file format may be *.xyz, *.pdb, *.lmp (LAMMPS), HISTORY (DLPOLY), or *.prmtop/*.mdcrd (Amber).
+                      BQB format (*.bqb, *.btr, *.blist) is also supported.
+      -vel <file>     Reads atom velocities from file in addition to main trajectory.
+                      Currently, only .xyz format is supported for velocity data.
+      -i <file>       Reads input from the specified text file.
+
+      -config <file>  Load the specified configuration file.
+      -stream         Treats input trajectory as a stream (e.g. named pipe): No fseek, etc.
+      -showconf       Shows a tree structure of the configuration file.
+      -writeconf      Writes the default configuration file, including all defines values.
+
+      -verbose        Show detailed information about what's going on.
+      -nocolor        Executes TRAVIS in monochrome mode (suitable for white background).
+      -dimcolor       Uses dim instead of bright colors.
+
+      -credits        Display a list of persons who contributed to TRAVIS.
+      -help, -?       Shows this help.
+
+    If only one argument is specified, it is assumed to be the name of a trajectory file.
+    If argument is specified at all, TRAVIS asks for the trajectory file to open.
+
+
+    Note: To show a list of all persons who contributed to TRAVIS,
+          please add "-credits" to your command line arguments, or set the
+          variable "SHOWCREDITS" to "TRUE" in your travis.conf file.
+
+    Source code from other projects used in TRAVIS:
+      - lmfit     from Joachim Wuttke
+      - kiss_fft  from Mark Borgerding
+      - voro++    from Chris Rycroft
+
+    http://www.travis-analyzer.de
+
+    Please cite the following articles:
+
+  * "TRAVIS - A Free Analyzer and Visualizer for Monte Carlo and Molecular Dynamics Trajectories",
+    M. Brehm, B. Kirchner; J. Chem. Inf. Model. 2011, 51 (8), pp 2007-2023.
+
+*** The End ***
+
