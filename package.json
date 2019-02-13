@@ -11,7 +11,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/dunkinbase/ember-elements-table",
   "scripts": {
     "build": "ember build",
     "lint:js": "ember adde-lint --javascript",
@@ -102,5 +102,5 @@
   "ember-addon": {
     "configPath": "tests/dummy/config"
   },
-  "homepage": "https://dunkinbase.github.io/ember-elements-table"
+  "homepage": "https://dunkinbase.github.io/ember-elements"
 }
