@@ -25,6 +25,7 @@ import { readOnly } from '@ember-decorators/object/computed';
     <t.body @rows={{rows}} />
   </EmberTable>
   ```
+  @yield {object} columnMeta - The meta object associated with this column
 */
 
 @tagName('')
