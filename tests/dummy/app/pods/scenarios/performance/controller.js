@@ -1,9 +1,17 @@
 import Controller from '@ember/controller';
 
-import { action, computed } from '@ember-decorators/object';
-import { generateRows, generateColumns } from '../../../utils/generators';
+import {
+  action,
+  computed
+} from '@ember-decorators/object';
+import {
+  generateRows,
+  generateColumns
+} from '../../../utils/generators';
+import Ember from 'ember';
 
 export default class BasicController extends Controller {
+  prevSelectedCell = null;
   @computed
   get rows() {
     let rows = generateRows(10, 3, (row, key) => `${row.id}${key}`);
@@ -37,5 +45,14 @@ export default class BasicController extends Controller {
   @action
   onUpdateSorts(sorts) {
     this.set('sorts', sorts);
+  }
+  @action
+  onClickCell(event) {
+
+    if (this.prevSelectedCell != null)
+      Ember.set(this.prevSelectedCell.cellMeta, 'selectedCell', false);
+
+    Ember.set(event.cellMeta, 'selectedCell', true);
+    this.set('prevSelectedCell', event);
   }
 }

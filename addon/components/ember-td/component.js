@@ -2,7 +2,7 @@ import BaseTableCell from '../-private/base-table-cell';
 
 import { action, computed } from '@ember-decorators/object';
 import { alias, readOnly } from '@ember-decorators/object/computed';
-import { tagName } from '@ember-decorators/component';
+import { tagName,className } from '@ember-decorators/component';
 import { argument } from '@ember-decorators/argument';
 import { type, optional } from '@ember-decorators/argument/type';
 import { Action } from '@ember-decorators/argument/types';
@@ -33,9 +33,12 @@ import { SELECT_MODE } from '../../-private/collapse-tree';
   @yield {object} columnValue - The column definition
   @yield {object} rowValue - The row definition
 
-  @yield {object} cellMeta - The meta object associated with the cell
+  @yield {object} cellMeta - The meta object associated with the cell 
+  @yield {boolean} cellmeta.selectedCell - The meta object associated with the selected cell. if selected cell is true then 'selectedCell' class bind with ember-td for adding styles
   @yield {object} columnMeta - The meta object associated with the column
   @yield {object} rowMeta - The meta object associated with the row
+  
+
 */
 @tagName('td')
 export default class EmberTd extends BaseTableCell {
@@ -59,6 +62,13 @@ export default class EmberTd extends BaseTableCell {
   @argument
   @type(optional(Action))
   onDoubleClick;
+
+  /**
+    Default row height is 32
+  */
+  @argument({ defaultIfUndefined: true })
+  @type('number')
+  rowHeight =32;
 
   @computed('api') // only watch `api` due to a bug in Ember
   get unwrappedApi() {
@@ -91,7 +101,17 @@ export default class EmberTd extends BaseTableCell {
 
   @readOnly('rowMeta.canCollapse')
   canCollapse;
+  
+  @readOnly('cellMeta.selectedCell')
+  isSelected;
 
+  @className // adding selectedCell class to cell if cellmeta.selectedCell==true
+  @computed('isSelected')
+  get selectedcell() {
+      if(this.get('isSelected') )
+       return 'selectedCell';
+      return '';
+  }
   init() {
     super.init(...arguments);
 

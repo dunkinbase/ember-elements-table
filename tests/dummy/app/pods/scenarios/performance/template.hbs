@@ -1,4 +1,4 @@
-<div class="demo-container fixed-width">
+<div class="demo-container fixed-width" style="height:800px;width:1000px;margin-left:10%">
   {{#ember-table as |t|}}
     {{#ember-thead
       api=t
@@ -23,7 +23,7 @@
       as |b|
     }}
       {{#ember-tr api=b as |r|}}
-        {{#ember-td api=r as |value column row cellMeta columnMeta|}}
+        {{#ember-td api=r onClick=(action 'onClickCell') as |value column row cellMeta columnMeta|}}
           {{value}}
 
           {{#if (eq columnMeta.index 0)}}lorem ipsum dolor{{/if}}

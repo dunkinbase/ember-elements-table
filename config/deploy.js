@@ -4,6 +4,9 @@
 module.exports = function(deployTarget) {
   let ENV = {
     build: {},
+    git: {
+      repo: 'git@github.com:dunkinbase/ember-elements-table.git',
+    },
     // include other plugin configuration that applies to all deploy targets here
   };
 

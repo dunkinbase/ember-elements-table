@@ -28,6 +28,7 @@ export default Component.extend({
     if (typeof FastBoot === 'undefined' && this.element) {
       let width = `${this.get('columnMeta.width')}px`;
 
+      this.element.style.height=`${this.get('rowHeight')}px`;
       this.element.style.width = width;
       this.element.style.minWidth = width;
       this.element.style.maxWidth = width;
